@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MiniQuiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+  <style>
+     body {
+      font-family: 'Comic Neue', cursive;
+      background: #e0f0ff;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 0.8s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+    p {
+        font-family: 'Comic Neue', cursive;
+   }
+html {
+  scroll-behavior: smooth;
+}
+    
+header {
+      background: #062d5b;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fbb03b;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    header .logo img {
+      width: 50px;
+      height: auto;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    header nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #fbb03b;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    header > .logo img{
+        border: none;
+        border-radius: 10px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .title{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    margin: 50px;
+    gap: 30px;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-item {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 280px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform-origin: center;
+    justify-content: flex-start;
+    transition: 200ms ease-out;
+    transition-duration: 250ms;
+}
+
+.grid-item:hover {
+    padding: 20px;
+    background-color: #062d5b;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+}
+   </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="">
+    <span class="logo-text">MiniQuiz</span>
+  </div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="projecthtml.html">Quizzes</a>
+    <a href="story(header)1.html">Story</a>
+    <a href="Community6.html">Community</a>
+  </nav>
+</header>
+  
+  </header>
+
+<div class="container">
+
+  <div class="grid">
+    <div class="grid-item">
+      <img src="story 1.png" alt="">
+      <a href="story1.html"><p>Si Juan at ang Alimango</p></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="story 2.png" alt="">
+      <a href="story2.html"><p>Rom-rom at si Lola</p></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="story 3.png" alt="">
+      <a href="story3.html"><p>Ibong Adarna</p></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="story 4.png" alt="">
+      <a href="story4.html"><p>Alamat ng Pinya</p></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="story 5.png" alt="">
+      <a href="story5.html"><p>Si Pagong at si Matsing </p></a>
+    </div>
+
+    <div class="grid-item">
+      <h1 id="soon">COMING SOON...</h1>
+  </div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MiniQuiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="story2.css">
+   <style>
+      body {
+      font-family: 'Comic Neue', cursive;
+      background: #e0f0ff;
+      margin: 0;
+      padding: 0;
+    }
+html {
+  scroll-behavior: smooth;
+}
+    
+header {
+      background: #062d5b;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fbb03b;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    header .logo img {
+      width: 50px;
+      height: auto;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    header nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #fbb03b;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    header > .logo img{
+        border: none;
+        border-radius: 10px;
+    }
+
+    .container > .left img{
+        min-height: 250px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .next-button {
+        width: 100%;
+      }
+    }
+
+    .container {
+      display: flex;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .left {
+      background: #f3faff;
+      text-align: center;
+    }
+
+    .left img {
+      width: 80%;
+    }
+
+    .left h2 {
+      font-size: 24px;
+      margin: 15px 0 5px;
+      color: #444;
+    }
+
+    .left p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .next-button {
+      margin-top: 30px;
+      background: #fbb03b;
+      border: none;
+      padding: 10px 120px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .right {
+      background: #062d5b;
+      color: white;
+    }
+
+    .quiz-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-question p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .quiz-options input[type="radio"] {
+      display: none;
+    }
+
+    .quiz-options label {
+      display: block;
+      background: #fff;
+      color: #062d5b;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .quiz-feedback {
+      display: none;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    input[type="radio"]:checked + label.correct + .quiz-feedback.correct,
+    input[type="radio"]:checked + label.incorrect + .quiz-feedback.incorrect {
+      display: block;
+    }
+
+    .quiz-feedback.correct {
+      color: lightgreen;
+    }
+
+    .quiz-feedback.incorrect {
+      color: red;
+   </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="">
+    <span class="logo-text">MiniQuiz</span>
+  </div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="story2.html">Quizzes</a>
+    <a href="story(header)1.html">Story</a>
+    <a href="Community6.html">Community</a>
+  </nav>
+</header>
+
+<div class="container">
+
+
+<div class="container">
+  <div class="left">
+    <img src="story 2.png" alt="Rom-rom at si Lola"><br>
+    <h2>Rom-rom at si Lola</h2>
+    <p>Si Rom-rom ay isang batang lalaki na mahilig maglaro sa labas. Isang araw, inutusan siya ng kanyang lola na bumili ng tinapay. Pero dahil sa dami ng kanyang kalaro, nakalimutan niya ang utos.
+
+<br><br>Pag-uwi niya, wala siyang dalang tinapay. Nalungkot ang kanyang lola dahil ito lang ang kakainin nila. Nahiya si Rom-rom at nangakong hindi na uulit.
+
+<br><br>Kinabukasan, agad niyang tinapos ang utos ni Lola bago makipaglaro. Natuwa ang kanyang lola at binigyan siya ng dagdag na baon bilang gantimpala.</p>
+<a href="story3.html"><button class="next-button">NEXT</button></a>
+  </div>
+
+  <div class="right" id="quiz">
+  <div class="quiz-title">QUIZ</div>
+
+
+    <div class="quiz-question">
+      <p>Ano ang utos ni Lola kay Rom-rom?</p>
+      <div class="quiz-options">
+        <input type="radio" id="q1a1" name="q1">
+        <label for="q1a1" class="incorrect">Maghugas ng pinggan</label>
+        <div class="quiz-feedback incorrect">❌ Mali! hindi ito ang utos nin Lola kay Rom-rom</div>
+
+        <input type="radio" id="q1a3" name="q1">
+        <label for="q1a3" class="incorrect">Maglinis ng bahay</label>
+        <div class="quiz-feedback incorrect">❌ Mali! hindi ito ang utos nin Lola kay Rom-rom</div>
+
+        <input type="radio" id="q1a2" name="q1">
+        <label for="q1a2" class="correct">Bumili ng tinapay</label>
+        <div class="quiz-feedback correct">✅ Tama! "Bumili ng tinapay" ang utos ni Lola kay Rom-rom</div>
+      </div>
+    </div>
+
+    <div class="quiz-question">
+      <p>Ano ang ginawa ni Rom-rom sa halip na sumunod?</p>
+      <div class="quiz-options">
+        <input type="radio" id="q2a1" name="q2">
+        <label for="q2a1" class="correct">Nakipaglaro</label>
+        <div class="quiz-feedback correct">✅ Tama! "Nakipaglaro" ang ginawa ni Rom-rom</div>
+
+        <input type="radio" id="q2a2" name="q2">
+        <label for="q2a2" class="incorrect">Natulog</label>
+        <div class="quiz-feedback incorrect">❌ Mali! hindi ito ang ginawa ni Rom-rom</div>
+
+        <input type="radio" id="q2a3" name="q2">
+        <label for="q2a3" class="incorrect">Nagtago</label>
+        <div class="quiz-feedback incorrect">❌ Mali! hindi ito ang ginawa ni Rom-rom</div>
+      </div>
+    </div>
+
+    <div class="quiz-question">
+      <p>Ano ang natutunan ni Rom-rom?</p>
+      <div class="quiz-options">
+        <input type="radio" id="q3a1" name="q3">
+        <label for="q3a1" class="correct">Unahin ang utos</label>
+        <div class="quiz-feedback correct">✅ Tama! "Unahin ang utos" ang natutunan ni Rom-rom </div>
+
+        <input type="radio" id="q3a2" name="q3">
+        <label for="q3a2" class="incorrect">Kumain ng marami</label>
+        <div class="quiz-feedback incorrect">❌ Mali! hindi ito ang natutunan ni Rom-rom</div>
+
+        <input type="radio" id="q3a3" name="q3">
+        <label for="q3a3" class="incorrect">Magtago sa utos</label>
+        <div class="quiz-feedback incorrect">❌ Mali! hindi ito ang natutunan ni Rom-rom</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

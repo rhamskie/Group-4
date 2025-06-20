@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MiniQuiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: #e0f0ff;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 0.8s ease-in-out;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #062d5b;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fbb03b;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .logo img {
+      width: 50px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #fbb03b;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .video-card {
+      background-color: #fff8dc;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: scale(1.03);
+    }
+
+    .video-card video, .video-card iframe {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+    }
+
+    .video-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #062d5b;
+    }
+
+    .video-description {
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+    <span class="logo-text">MiniQuiz</span>
+  </div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="projecthtml.html">Quizzes</a>
+    <a href="story(header)1.html">Story</a>
+    <a href="Community6.html">Community</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="video-card">
+    <video controls>
+      <source src="kuneho1.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Si Kuneho at si Pagong</div>
+    <div class="video-description">Ang kwento ng mapagmataas ni Kuneho kay Pagong.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="pinya.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Alamat ng Pinya</div>
+    <div class="video-description">Bakit may mata ang pinya? Alamin sa alamat na ito.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="juan.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Si Juan Tamad</div>
+    <div class="video-description">Kilalanin si Juan tamad, kung anong kapalaran nya.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="bahaghari.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Alamat ng Bahaghari</div>
+    <div class="video-description">Ang makulay na kwento kung bakit may bahaghari.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="uwak.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Alamat ng uwak Uwak</div>
+    <div class="video-description">Alamin ang pag-isip ng paraan ni Uwak.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="leon.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Ang Leon at ang Daga</div>
+    <div class="video-description">Kahit maliit ay makakatulong din sa mas malaki.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="mabait na bata.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Ang Mabait na Bata</div>
+    <div class="video-description">Isang aral sa pagiging masunurin at mabait na bata.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="alamat ng bawang.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Alamat ng Bawang</div>
+    <div class="video-description">Ano nga ba ang kwento ng kasangkapang ito.</div>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="alamat ng kawayan.mp4" type="video/mp4">
+    </video>
+    <div class="video-title">Alamat ng Kawayan</div>
+    <div class="video-description">Alamin kung bakit ito tinawag na "Kawayan"</div>
+  </div>
+</div>
+</body>
+</html>
